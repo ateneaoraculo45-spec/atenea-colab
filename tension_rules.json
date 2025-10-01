@@ -1,0 +1,104 @@
+[
+  {
+    "id": "form_contradiction",
+    "type": "form_contradiction",
+    "name": "Contradicción de Forma",
+    "description": "Equipo con mala forma reciente pero con alta probabilidad de ganar",
+    "conditions": {
+      "min_form_difference": 5,
+      "min_probability_threshold": 0.6
+    },
+    "weight": 0.3
+  },
+  {
+    "id": "strength_mismatch",
+    "type": "strength_mismatch",
+    "name": "Desbalance de Fuerza",
+    "description": "Gran diferencia entre fuerza ofensiva de ambos equipos",
+    "conditions": {
+      "min_strength_difference": 0.5
+    },
+    "weight": 0.25
+  },
+  {
+    "id": "high_volatility",
+    "type": "high_volatility",
+    "name": "Alta Volatilidad",
+    "description": "Equipo con alta varianza en goles recientes",
+    "conditions": {
+      "min_variance_threshold": 2.0
+    },
+    "weight": 0.2
+  },
+  {
+    "id": "defensive_mismatch",
+    "type": "defensive_mismatch",
+    "name": "Desbalance Defensivo",
+    "description": "Gran diferencia en fuerza defensiva",
+    "conditions": {
+      "min_def_strength_difference": 0.4
+    },
+    "weight": 0.2
+  },
+  {
+    "id": "corners_volatility",
+    "type": "corners_volatility",
+    "name": "Volatilidad en Córners",
+    "description": "Alta varianza en córners recientes",
+    "conditions": {
+      "min_corners_variance": 3.0
+    },
+    "weight": 0.15
+  },
+  {
+    "id": "cards_pattern",
+    "type": "cards_pattern",
+    "name": "Patrón de Tarjetas",
+    "description": "Equipo con patrón irregular de tarjetas",
+    "conditions": {
+      "min_cards_variance": 2.0
+    },
+    "weight": 0.15
+  },
+  {
+    "id": "home_advantage_anomaly",
+    "type": "home_advantage_anomaly",
+    "name": "Anomalía de Ventaja Local",
+    "description": "Local con ventaja inusual o desventaja inesperada",
+    "conditions": {
+      "home_strength_threshold": 1.3,
+      "away_strength_threshold": 0.7
+    },
+    "weight": 0.25
+  },
+  {
+    "id": "recent_streak",
+    "type": "recent_streak",
+    "name": "Racha Reciente",
+    "description": "Racha de victorias o derrotas significativa",
+    "conditions": {
+      "min_streak_length": 3
+    },
+    "weight": 0.2
+  },
+  {
+    "id": "goals_pattern_shift",
+    "type": "goals_pattern_shift",
+    "name": "Cambio en Patrón de Goles",
+    "description": "Cambio significativo en patrón de goles entre HT y FT",
+    "conditions": {
+      "min_ht_ft_difference": 0.5
+    },
+    "weight": 0.15
+  },
+  {
+    "id": "market_inefficiency",
+    "type": "market_inefficiency",
+    "name": "Ineficiencia del Mercado",
+    "description": "Discrepancia entre probabilidad modelo y cuotas del mercado",
+    "conditions": {
+      "min_ev_threshold": 0.08
+    },
+    "weight": 0.3
+  }
+]
